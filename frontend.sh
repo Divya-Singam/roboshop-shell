@@ -1,6 +1,6 @@
 yum install nginx -y  &>>/tmp/roboshop.log
 rm -rf /usr/share/nginx/html/* &>>/tmp/roboshop.log
-curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip  >2/tmp/error.log
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip  2>/tmp/error.log
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip  &>>/tmp/roboshop.log
 #we need to copy config file
