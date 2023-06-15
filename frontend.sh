@@ -6,3 +6,8 @@ unzip /tmp/frontend.zip  &>>/tmp/roboshop.log
 #we need to copy config file
 systemctl enable nginx  &>>/tmp/roboshop.log
 systemctl restart nginx  &>>/tmp/roboshop.log
+
+#systemctl restart nginx  &>>/tmp/roboshop.log
+
+#  /dev/null  --nullify the output that goes to this file.
+#tee command will store errors but not visible in output
