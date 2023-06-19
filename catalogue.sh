@@ -19,16 +19,16 @@ cd /app
 npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m setup system d service \e[0m"
-cp catalogue.service /etc/systemmd/system/catalogue.service &>>/tmp/roboshop.log
+cp /root/roboshop-shell/catalogue.service /etc/systemmd/system/catalogue.service &>>/tmp/roboshop.log
 
 echo -e "\e[33m start catalogue service\e[0m"
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
 echo -e "\e[33m copy mongodb repo file\e[0m"
-cp mongodb.repo /etc/yum.repos.d/mongodb.repo
-cp mongodb.repo /etc/yum.repos.d/mongodb.repo
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y
 echo -e "\e[33m Load schema\e[0m"
-cp mongodb.repo /etc/yum.repos.d/mongodb.repo
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 mongo --host mongodb-dev.donedevops.store </app/schema/catalogue.js
