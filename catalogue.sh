@@ -26,9 +26,9 @@ systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
 echo -e "\e[33m copy mongodb repo file\e[0m"
-cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
+#cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y
 echo -e "\e[33m Load schema\e[0m"
-cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
+#cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 mongo --host mongodb-dev.donedevops.store </app/schema/catalogue.js
